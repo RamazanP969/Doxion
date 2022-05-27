@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles1.css" rel = "stylesheet"/>
+    <title>DOXION</title>
+</head>
+<body>
+    <div class="header">
+      
+        <div class="more">
+        <a href="index.html" class="button">Назад</a>
+        </div>
+        <div class="name">
+            <p>DOXION</p>
+            </div>
+    </div>
+
+    <div class="rows">
+<div class="img-content">
+  <div style="text-align:center">
+    <h2>Tabbed Image Gallery</h2>
+    <p>Click on the images below:</p>
+  </div>
+  
+  <!-- The four columns -->
+  <div class="row">
+    <div class="column">
+      <img src="img/img_nature.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="img/img_snow.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="img/img_mountains.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+    </div>
+
+  </div>
+  
+  <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">×</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+  </div>
+  
+  <script>
+  function myFunction(imgs) {
+      var expandImg = document.getElementById("expandedImg");
+      var imgText = document.getElementById("imgtext");
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+  }
+  </script>
+  
+</div>
+<div class="description">
+  <div class="des">
+  <h3>Описание:</h3>
+  <ul>
+    <li>Пробег</li>
+    <li>Модель</li>
+    <li>Сирийный номер</li>
+    <li>Дата выпуска</li>
+    <li>Задний привод</li>
+  </ul>
+  <p>Автомобиль уже давно стал частью нашей жизни. Особенно это</p>
+  <p>касается мужчин и молодых людей,хотя и девушки тоже не отстают.</p>
+  <p>Сейчас уже почти каждый имеет свой автомобиль­ или мечтает о нем.</p>
+  <p>Можно найти машину на любой вкус, для любого человека,</p>
+  <p>предназначенную­ абсолютно для любых условий и окружающей</p>
+  <p>среды. Легковые машины, внедорожники, автобусы и многие другие виды машин,</p>
+  <div class="eoo">
+    
+
+<button class="accordion">Ещё...</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+  <p>nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
+  </div>
+  </div>
+  <div class="prise">
+    <p>Цена</p>
+  </div>
+</div>
+    </div>
+
+</body>
+</html>
